@@ -27,10 +27,6 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
-      },
-      {
-        test: 'index.html',
-        use: [{ loader: 'html-loader', options: { name: 'index.html' } }]
       }
     ]
   },
