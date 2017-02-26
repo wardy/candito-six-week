@@ -1,8 +1,40 @@
 <template>
   <div id="app">
-    <p>
+      <ui-toolbar type="colored" text-color="white" title="Inbox">
+        <div slot="actions">
+            <ui-icon-button
+                color="white"
+                icon="refresh"
+                size="large"
+                type="secondary"
+            ></ui-icon-button>
+
+            <ui-icon-button
+                color="white"
+                icon="search"
+                size="large"
+                type="secondary"
+            ></ui-icon-button>
+
+            <ui-icon-button
+                color="white"
+                has-dropdown
+                icon="more_vert"
+                ref="dropdownButton4"
+                size="large"
+                type="secondary"
+            >
+                <ui-menu
+                    contain-focus
+                    has-icons
+                    slot="dropdown"
+                    :options="['test']"
+                    @close="$refs.dropdownButton4.closeDropdown()"
+                ></ui-menu>
+            </ui-icon-button>
+        </div>
+    </ui-toolbar>
       <router-link to="/">Go to Home</router-link>
-    </p>
     <router-view></router-view>
   </div>
 </template>
