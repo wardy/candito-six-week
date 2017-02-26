@@ -1,35 +1,26 @@
 <template>
   <div id="app">
-    <h1>Hello App!</h1>
     <p>
-      <!-- use router-link component for navigation. -->
-      <!-- specify the link by passing the `to` prop. -->
-      <!-- <router-link> will be rendered as an `<a>` tag by default -->
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
+      <router-link to="/">Go to Home</router-link>
     </p>
-    <!-- route outlet -->
-    <!-- component matched by the route will render here -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      msg: 'Hello world!'
-    }
-  }
-}
 </script>
 
 <style lang="scss">
-.example {
-  color: red;
-}
-</style>
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
 
-<custom1>
-  This could be e.g. documentation for the component.
-</custom1>
+  html {
+      font-size: 100%;
+  }
+  h1 {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+</style>

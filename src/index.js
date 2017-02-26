@@ -1,17 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
+import 'keen-ui/dist/keen-ui.css'
 
+import routes from './routes.js'
 import App from './app.vue';
 
+import KeenUI from 'keen-ui';
+
+Vue.use(KeenUI);
+
+Vue.use(VueMaterial)
 Vue.use(VueRouter);
-
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
-const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
 
 const router = new VueRouter({
   routes
