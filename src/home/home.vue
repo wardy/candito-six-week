@@ -65,23 +65,7 @@
 <script>
 
 export default {
-  data() {
-    return {
-      formData: {
-        startDate: new Date(),
-        measurementSystem: '',
-        benchOneRepMax: '',
-        squatOneRepMax: '',
-        deadliftOneRepMax: '',
-        upperBackHorizontalPullAccessory: '',
-        shoulderAccessory: '',
-        upperBackVerticalPullAccessory: ''
-      }
-    }
-  },
-  components: {
-
-  }
+  props: ['formData']
 }
 </script>
 

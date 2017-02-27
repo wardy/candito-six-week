@@ -24,22 +24,39 @@
                 size="large"
                 type="secondary"
             >
-                <ui-menu
-                    contain-focus
-                    has-icons
-                    slot="dropdown"
-                    :options="['test']"
-                    @close="$refs.dropdownButton4.closeDropdown()"
-                ></ui-menu>
+            <ui-menu
+                contain-focus
+                has-icons
+                slot="dropdown"
+                :options="['test']"
+                @close="$refs.dropdownButton4.closeDropdown()"
+            ></ui-menu>
             </ui-icon-button>
         </div>
     </ui-toolbar>
       <router-link to="/">Go to Home</router-link>
-    <router-view></router-view>
+      <router-link to="/week-one">Go to Home</router-link>
+    <router-view :formData="formData"></router-view>
   </div>
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      formData: {
+        startDate: new Date(),
+        measurementSystem: '',
+        benchOneRepMax: '',
+        squatOneRepMax: '',
+        deadliftOneRepMax: '',
+        upperBackHorizontalPullAccessory: '',
+        shoulderAccessory: '',
+        upperBackVerticalPullAccessory: ''
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss">
