@@ -5,28 +5,28 @@ module.exports = {
   output: {
     filename: './dist/bundle.js'
   },
-  resolve:{
+  resolve: {
     extensions: ['.js', '.json', '.vue', '.scss'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      vue$: 'vue/dist/vue.common.js'
     }
   },
   module: {
     rules: [
-       {
+      {
         test: /\.css$/,
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" },
-        ],
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+        ]
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+            scss: 'vue-style-loader!css-loader!sass-loader',
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
         }
       },
