@@ -2,6 +2,7 @@
   "extends": ["@sky-uk/eslint-config-sky"],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "mocha": true
   }
 }

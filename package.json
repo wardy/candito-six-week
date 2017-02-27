@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha **/*.spec.js --compilers=js:babel-register",
+    "test:watch": "mocha **/*.spec.js --compilers=js:babel-register --watch",
     "build": "webpack --config=./build/webpack.config.js",
     "dev": "webpack-dev-server --open --content-base=dist/ --config=./build/webpack.config.js",
     "lint": "eslint .",
@@ -15,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@sky-uk/eslint-config-sky": "^16.1.0",
+    "assert": "^1.4.1",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.2",
@@ -27,7 +29,7 @@
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.28.0",
     "keen-ui": "^1.0.0",
-    "material-design-icons": "^3.0.1",
+    "mocha": "^3.2.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",
