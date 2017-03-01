@@ -36,11 +36,23 @@
     </ui-toolbar>
       <router-link to="/">Go to Home</router-link>
       <router-link to="/week-one">Go to Home</router-link>
+      <button v-on:click="addItem"></button>
     <router-view :formData="formData"></router-view>
   </div>
 </template>
 
 <script>
+import Firebase from 'firebase';
+const firebaseConfig = {
+  apiKey: 'AIzaSyAC5rkhmJjF1ErxtlVwtQfmrT2eJ8K7ALo',
+  authDomain: 'candito-six-week-strength.firebaseapp.com',
+  databaseURL: 'https://candito-six-week-strength.firebaseio.com',
+  storageBucket: 'candito-six-week-strength.appspot.com',
+  messagingSenderId: '567954345513'
+};
+const firebaseApp = Firebase.initializeApp(firebaseConfig);
+const firebaseDatabase = firebaseApp.database();
+
 export default {
   data () {
     return {
