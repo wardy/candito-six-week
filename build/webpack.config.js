@@ -44,10 +44,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './dist/index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/auth.html',
-      filename: './dist/auth.html'
     })
   ],
   devtool: 'source-map'
