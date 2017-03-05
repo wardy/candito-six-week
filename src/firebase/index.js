@@ -1,4 +1,6 @@
 import Firebase from 'firebase';
+import firebaseui from 'firebaseui';
+import 'firebaseui/dist/firebaseui.css';
 
 let firebaseApp;
 
@@ -37,4 +39,21 @@ function getFirebaseAuthUIConfig() {
   };
 }
 
-export default { getFirebaseDatabase, getFirebaseAuth, getFirebaseAuthUIConfig };
+function loadAuthUI() {
+  const firebaseAuth = getFirebaseAuth();
+  const uiConfig = getFirebaseAuthUIConfig();
+  const ui = new firebaseui.auth.AuthUI(firebaseAuth);
+  ui.start('#firebaseui-auth-container', uiConfig);
+}
+
+function getUser() {
+  return getFirebaseAuth();
+}
+
+export default {
+  getFirebaseDatabase,
+  getFirebaseAuth,
+  getFirebaseAuthUIConfig,
+  getUser,
+  loadAuthUI
+};

@@ -1,57 +1,24 @@
 <template>
   <div id="app">
-      <ui-toolbar type="colored" text-color="white" title="Inbox">
-        <div slot="actions">
-            <ui-icon-button
-                color="white"
-                icon="refresh"
-                size="large"
-                type="secondary"
-            ></ui-icon-button>
-
-            <ui-icon-button
-                color="white"
-                icon="search"
-                size="large"
-                type="secondary"
-            ></ui-icon-button>
-
-            <ui-icon-button
-                color="white"
-                has-dropdown
-                icon="more_vert"
-                ref="dropdownButton4"
-                size="large"
-                type="secondary"
-            >
-            <ui-menu
-                contain-focus
-                has-icons
-                slot="dropdown"
-                :options="['test']"
-                @close="$refs.dropdownButton4.closeDropdown()"
-            ></ui-menu>
-            </ui-icon-button>
-        </div>
-    </ui-toolbar>
+    <navbar></navbar>
       <router-link to="/">Go to Home</router-link>
       <router-link to="/week-one">Go to Home</router-link>
       <button v-on:click="addItem"></button>
-    <auth-component></auth-component>
-    <router-view :formData="formData"></router-view>
+    <auth-component v-if="isLoggedIn"></auth-component>
+    <router-view v-else :formData="formData"></router-view>
   </div>
 </template>
 
 <script>
 import firebaseHelper from './firebase';
+import navbarComponent from './components/navbar.vue';
 import authComponent from './components/auth.vue';
-
 const firebaseDatabase = firebaseHelper.getFirebaseDatabase();
-firebaseHelper.getFirebaseAuthUIConfig();
 
 export default {
   components: {
-    'auth-component': authComponent
+    'auth-component': authComponent,
+    'navbar': navbarComponent
   },
   data () {
     return {
