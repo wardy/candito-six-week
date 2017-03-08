@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <navbar></navbar>
-      <router-link to="/">Go to Home</router-link>
-      <router-link to="/week-one">Go to Home</router-link>
       <button v-on:click="addItem"></button>
     <router-view :formData="formData"></router-view>
   </div>
