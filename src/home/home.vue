@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <h1>Candito 6 Week Strength Program</h1>
-
     <h2>When do you want to start the program?</h2>
     <ui-datepicker
       picker-type="popover"

@@ -4,8 +4,7 @@
       <router-link to="/">Go to Home</router-link>
       <router-link to="/week-one">Go to Home</router-link>
       <button v-on:click="addItem"></button>
-    <auth-component v-if="isLoggedIn"></auth-component>
-    <router-view v-else :formData="formData"></router-view>
+    <router-view :formData="formData"></router-view>
   </div>
 </template>
 
@@ -13,6 +12,7 @@
 import firebaseHelper from './firebase';
 import navbarComponent from './components/navbar.vue';
 import authComponent from './components/auth.vue';
+
 const firebaseDatabase = firebaseHelper.getFirebaseDatabase();
 
 export default {

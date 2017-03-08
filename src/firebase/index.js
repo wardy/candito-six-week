@@ -47,7 +47,28 @@ function loadAuthUI() {
 }
 
 function getUser() {
-  return getFirebaseAuth();
+  return getFirebaseAuth().currentUser;
+}
+
+function checkLoginStatus(signedInCallback, signedOutCallback) {
+  getFirebaseAuth().onAuthStateChanged(user => {
+    if (user) {
+      signedInCallback();
+    } else {
+      signedOutCallback();
+    }
+  });
+}
+
+function checkLoginStatusPromise() {
+  return new Promise((resolve, reject) => {
+    getFirebaseAuth().onAuthStateChanged(user => resolve(user), error => reject(error));
+  });
+}
+
+
+function signOut() {
+  return getFirebaseAuth().signOut();
 }
 
 export default {
@@ -55,5 +76,8 @@ export default {
   getFirebaseAuth,
   getFirebaseAuthUIConfig,
   getUser,
-  loadAuthUI
+  checkLoginStatus,
+  checkLoginStatusPromise,
+  loadAuthUI,
+  signOut
 };
