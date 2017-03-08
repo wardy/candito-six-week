@@ -4,54 +4,21 @@
 
     <h2>{{formData.startDate.toString()}}</h2>
     <div v-for="exercise in weekOneExercises">
-      <exercise :exercise=exercise />
+      <exercise :exercise="exercise" />
     </div>
   </div>
 </template>
 
 <script>
   import exercise from '../components/exercise.vue'
+
+  import weekOneExercises from '../fixtures/candito-six-week-week-one.json';
+
+  import { round } from '../services/math';
   export default {
     data () {
       return {
-        weekOneExercises: [
-          {
-            name: "Squat",
-            warmUpSets: true,
-            sets: [
-              { reps: 6, weight: this.formData.squatOneRepMax * 0.8},
-              { reps: 6, weight: this.formData.squatOneRepMax },
-              { reps: 6, weight: this.formData.squatOneRepMax },
-              { reps: 6, weight: this.formData.squatOneRepMax }
-            ],
-          },
-          {
-            name: "Deadlift",
-            warmUpSets: true,
-            sets: [
-              { reps: 6, weight: this.formData.deadliftOneRepMax },
-              { reps: 6, weight: this.formData.deadliftOneRepMax }
-            ],
-          },
-          {
-            name: "Optional Exercise 1",
-            warmUpSets: true,
-            sets: [
-              { reps: "8-12", weight: null },
-              { reps: "8-12", weight: null },
-              { reps: "8-12", weight: null }
-            ],
-          },
-          {
-            name: "Optional Exercise 2",
-            warmUpSets: true,
-            sets: [
-              { reps: "8-12", weight: null },
-              { reps: "8-12", weight: null },
-              { reps: "8-12", weight: null }
-            ],
-          }
-        ]
+        weekOneExercises
       }
     },
     components: {
