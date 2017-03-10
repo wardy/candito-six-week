@@ -1,17 +1,16 @@
 <template>
   <div>
     <h1>This is the week view {{$route.params.weekNumber}}</h1>
-    <router-view :weeksWorkouts="getWeek()"></router-view>
+    <router-view :weeksWorkouts="week"></router-view>
   </div>
 </template>
 
 <script>
-  import weekOneExercises from '../fixtures/test.json';
+  import weekOneExercises from '../fixtures/candito-six-week-week-program.json';
   export default {
-    methods: {
-      getWeek() {
+    computed: {
+      week() {
         const { weekNumber } = this.$route.params;
-        console.log(weekOneExercises)
         return weekOneExercises[weekNumber -1]
       }
     }

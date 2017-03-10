@@ -11,7 +11,7 @@
   import exercise from './exercise.vue';
   export default {
     computed: {
-      workout: function () {
+      workout() {
         const { dayNumber } = this.$route.params;
         return this.weeksWorkouts[dayNumber -1]
       }
