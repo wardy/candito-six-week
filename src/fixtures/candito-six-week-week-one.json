@@ -1,74 +1,164 @@
 [
-  {
-    "name": "Squat",
-    "warmUpSets": true,
-    "sets": [
-      {
-        "reps": 6,
-        "weight": 0.8
+  [
+    {
+      "date": {
+        "daysAfterStart": "1"
       },
-      {
-        "reps": 6,
-        "weight": 0.8
+      "exercises": [
+        {
+          "name": "Squat",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Deadlift",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": 6,
+              "weight": ""
+            },
+            {
+              "reps": 6,
+              "weight": ""
+            }
+          ]
+        },
+        {
+          "name": "Optional Exercise 1",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            }
+          ]
+        },
+        {
+          "name": "Optional Exercise 2",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+   [
+    {
+      "date": {
+        "daysAfterStart": "1"
       },
-      {
-        "reps": 6,
-        "weight": 0.8
-      },
-      {
-        "reps": 6,
-        "weight": 0.8
-      }
-    ]
-  },
-  {
-    "name": "Deadlift",
-    "warmUpSets": true,
-    "sets": [
-      {
-        "reps": 6,
-        "weight": ""
-      },
-      {
-        "reps": 6,
-        "weight": ""
-      }
-    ]
-  },
-  {
-    "name": "Optional Exercise 1",
-    "warmUpSets": true,
-    "sets": [
-      {
-        "reps": "8-12",
-        "weight": null
-      },
-      {
-        "reps": "8-12",
-        "weight": null
-      },
-      {
-        "reps": "8-12",
-        "weight": null
-      }
-    ]
-  },
-  {
-    "name": "Optional Exercise 2",
-    "warmUpSets": true,
-    "sets": [
-      {
-        "reps": "8-12",
-        "weight": null
-      },
-      {
-        "reps": "8-12",
-        "weight": null
-      },
-      {
-        "reps": "8-12",
-        "weight": null
-      }
-    ]
-  }
+      "exercises": [
+        {
+          "name": "Squat",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            },
+            {
+              "reps": 6,
+              "weight": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Deadlift",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": 6,
+              "weight": ""
+            },
+            {
+              "reps": 6,
+              "weight": ""
+            }
+          ]
+        },
+        {
+          "name": "Optional Exercise 1",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            }
+          ]
+        },
+        {
+          "name": "Optional Exercise 2",
+          "warmUpSets": true,
+          "sets": [
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            },
+            {
+              "reps": "8-12",
+              "weight": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
 ]
